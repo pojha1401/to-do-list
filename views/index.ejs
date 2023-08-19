@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+    <div class="heading">
+        <div class="box">
+            <h1>
+                <%=todayda%>, <%=todaym%>
+                        <%=todayd%>
+            </h1>
+        </div>
+    </div>
+    <div class="box">
+    </div>
+    <div class="box">
+        <% data.forEach(element=> {%>
+
+            <div class="item">
+                <input type="checkbox" class="check">
+                <p>
+
+                    <%=element.todoTask%>
+                </p>
+            </div>
+
+            <%})%>
+
+                <form class="item" action="/" method="POST">
+                    <input type="text" name="todo" placeholder="newItem">
+                    <button type="submit" class="but">+</button>
+                </form>
+
+    </div>
+
+    <%- include("partials/footer.ejs") %>
